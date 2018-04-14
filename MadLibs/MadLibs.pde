@@ -24,8 +24,9 @@ void setup() {
     poem[i] = poem[i].replaceAll("<adjective>", adjectives[index]);
     //pick random verb and replace verbs on current line
     int index = int(random(verbs.length-1));
-    poem[i] = poem[i]/replaceAll("<verb>", verbs[index];
+    poem[i] = poem[i]/replaceAll("<verb>", verbs[index]);
     //print poem to console with madlibs
+    println(poem[index]);}
 }
 
 void draw() {
