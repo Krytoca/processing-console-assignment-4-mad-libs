@@ -8,25 +8,26 @@
  
 void setup() {
   //load the poem
-  String poem[] = loadStrings("poem.txt");
+  String poem[] = loadStrings("data/poem.txt");
   //load verbs, adjectives, nouns
-  String nouns[] = loadStrings("nouns.txt");
-  String verbs[] = loadStrings("verbs.txt");
-  String adjectives[] = loadStrings("adjectives.txt");
+  String nouns[] = loadStrings("data/nouns.txt");
+  String verbs[] = loadStrings("data/verbs.txt");
+  String adjectives[] = loadStrings("data/adjectives.txt");
   //loop through the poem line by line
   for (int i = 0 ; i < poem.length; i++) {
   
     //Pick random noun and replace nouns on current line
-    int index = int(random(nouns.length-1));
-    poem[i] = poem[i].replaceAll("<noun>", nouns[index]);
+    int nindex = int(random(nouns.length-1));
+    poem[i] = poem[i].replaceAll("<noun>", nouns[nindex]);
     //pick random adjective and replace adjectives on current line
-    int index = int(random(adjectives.length-1));
-    poem[i] = poem[i].replaceAll("<adjective>", adjectives[index]);
+    int aindex = int(random(adjectives.length-1));
+    poem[i] = poem[i].replaceAll("<adjective>", adjectives[aindex]);
     //pick random verb and replace verbs on current line
-    int index = int(random(verbs.length-1));
-    poem[i] = poem[i]/replaceAll("<verb>", verbs[index]);
+    int vindex = int(random(verbs.length-1));
+    poem[i] = poem[i].replaceAll("<verb>", verbs[vindex]);
     //print poem to console with madlibs
-    println(poem[index]);}
+    println(poem[i]);
+  }
 }
 
 void draw() {
