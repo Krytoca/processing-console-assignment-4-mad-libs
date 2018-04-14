@@ -16,16 +16,15 @@ void setup() {
   //loop through the poem line by line
   for (int i = 0 ; i < poem.length; i++) {
   
-    //Pick random noun
+    //Pick random noun and replace nouns on current line
     int index = int(random(nouns.length-1));
     poem[i] = poem[i].replaceAll("<noun>", nouns[index]);
-    //pick random adjective
+    //pick random adjective and replace adjectives on current line
     int index = int(random(adjectives.length-1));
     poem[i] = poem[i].replaceAll("<adjective>", adjectives[index]);
-    //pick random verb
-    //replace noun-tag on the current line
-    //replace adjective-tag on current line
-    //replace verb-tag on current line
+    //pick random verb and replace verbs on current line
+    int index = int(random(verbs.length-1));
+    poem[i] = poem[i]/replaceAll("<verb>", verbs[index];
     //print poem to console with madlibs
 }
 
