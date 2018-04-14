@@ -20,6 +20,8 @@ void setup() {
     int index = int(random(nouns.length-1));
     poem[i] = poem[i].replaceAll("<noun>", nouns[index]);
     //pick random adjective
+    int index = int(random(adjectives.length-1));
+    poem[i] = poem[i].replaceAll("<adjective>", adjectives[index]);
     //pick random verb
     //replace noun-tag on the current line
     //replace adjective-tag on current line
